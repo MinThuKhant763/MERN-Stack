@@ -1,0 +1,11 @@
+Day 2
+
+arrow function
+destructure
+most used arrary methods (map,filter,find)
+
+filter -> return new arrary
+find -> return only one value
+
+spread operator
+reset parameter

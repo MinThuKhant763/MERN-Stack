@@ -1,0 +1,15 @@
+Day 1
+
+different between let,var and const 
+global scope,block scope and function scope
+var -> global scope and block scope to call globally
+const -> can assign array and object
+
+arrow function
+
+destructure -> array and object
+
+es 6 module
+
+ternay operator (?) and 
+&& -> true and continue
