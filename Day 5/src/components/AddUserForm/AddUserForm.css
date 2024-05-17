@@ -1,0 +1,27 @@
+.form-div{
+    margin-bottom: 8px
+}
+.form-div label{
+    display: block;
+    font-size: 17px;
+    font-weight: 400;
+}
+.form-div input{
+    font-size: 18px;
+    width: 90%;
+    border-radius: 6px;
+    border:1px solid #a8a6a6;
+    padding: 4px 8px;
+    margin-top: 8px;
+}
+.add-btn{
+    margin-top: 12px;
+    color: #fff;
+    background-color: rgb(58, 58, 255);
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    width: 35%;
+    border-radius: 6px;
+}

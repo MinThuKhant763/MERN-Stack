@@ -1,12 +1,10 @@
-import { useState } from 'react';
 import './App.css';
 import Students from './components/Students/Students';
-import Background from './components/Background/Background';
 import Form from './components/Form/Form';
+import { useState } from 'react';
 
 function App() {
-  const name = "Code Hub";
-  const students = [
+  const [students,setStudents] = useState([
     {
       name: "Mg Mg",
       address: "YGN"
@@ -19,19 +17,22 @@ function App() {
       name: "Aung Aung",
       address: "MDY"
     }
-  ];
+  ]);
+  const addNewMember = (memberInfo) => {
+
+    setStudents([...students,memberInfo]);
+
+  };
   return (
-    <>
-      <h1>{ name }</h1>
-      <Background>
-        <Students name={ students[0].name } address={ students[0].address } />
-        <Students name={ students[1].name } address={ students[1].address } />
-        <Students name={ students[2].name } address={ students[2].address } />
-      </Background>
-      <Background>
-        <Form />
-      </Background>
-    </>
+    <div className='App'>
+      <div className='container'>
+       {students.map((student) => (
+          <Students key={student.name} name={student.name} address={student.address}/>
+       )
+       )}
+      </div>
+      <Form addNewMember={ addNewMember } />
+    </div>
   );
 }
 

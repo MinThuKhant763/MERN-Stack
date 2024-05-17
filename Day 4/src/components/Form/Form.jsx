@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Form.css';
-const Form = () => {
+const Form = (props) => {
     const [name, setName] = useState("");
     const [address, setAddress] = useState("");
 
@@ -17,15 +17,15 @@ const Form = () => {
             name,
             address
         };
-        console.log(data);
+       props.addNewMember(data);
     };
 
 
     return (
         <form onSubmit={ showData }>
-            <input type="text" placeholder='Name' onChange={ trackName } />
-            <input type="text" placeholder='Address' onChange={ trackAddress } />
-            <button type='submit' className='submitBtn'>Submit</button>
+            <input type="text" placeholder='Name' onChange={ trackName } value={name}/>
+            <input type="text" placeholder='Address' onChange={ trackAddress } value={address}/>
+            <button type='submit' className='submitBtn'>Add new member</button>
         </form>
     );
 };
